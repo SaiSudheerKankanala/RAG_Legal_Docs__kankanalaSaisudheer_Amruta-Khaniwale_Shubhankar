@@ -1,1 +1,7 @@
-# RAG_Legal_Docs__kankanalaSaisudheer_Amruta-Khaniwale_Shubhankar
+This Pipeline built here is a Retrieval-Augmented Generation (RAG) pipeline for the processing of legal documents. The corpus we worked on comprised documents pertaining to non-disclosure agreements, acquisition contracts, annotated clauses, and privacy policies. After cleaning and preprocessing more than 698 documents we conducted some statistical and textual analyses of document characteristics, including frequency of words and similarity measures based on TF-IDF.
+
+For retrieval-based generation, the documents were chunked carefully in consideration of legal-specific delimiters and stored in the vector database Qdrant using OpenAI embeddings. This was then combined with the GPT-language model wherein LangChain offers RetrievalQA for solving legal queries. 
+
+The evaluation on various benchmarks consisting of more than 6,800 questions show the system consistently returning context-aware and relevant answers. The BLEU and ROUGE-L scores over 100 sample questions reveal that the pipeline retrieves semantically meaningful chunks and generates accurate response grounded in the source content.
+
+This solution is the example par excellence of how the combination of vector-based retrieval with generative models can represent an important time saver for legal professionals. Advanced evaluation frameworks such as RAGAS can be incorporated, hybrid retrieval experiments (BM25 + vector) carried out, and chunking strategies improved depending on document type to enhance system performance and trustworthiness.
